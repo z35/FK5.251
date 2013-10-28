@@ -7,55 +7,55 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 
+	private ActivityLifecycle af;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.i("info", "onCreate");
+        af = new ActivityLifecycle(this);
+        af.onCreate();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        Log.i("info", "onCreateOptionsMenu");
-        return true;
+        return af.onCreateOptionsMenu(menu);
     }
     
     @Override
     protected void onStart() {
     	super.onStart();
-    	Log.i("info", "onStart");
+    	af.onStart();
     }
     
     @Override
     protected void onRestart() {
     	super.onRestart();
-    	Log.i("info", "onRestart");
+    	af.onRestart();
     }
 
     @Override
     protected void onResume() {
     	super.onResume();
-    	Log.i("info", "onResume");
+    	af.onResume();
     }
 
     @Override
     protected void onPause() {
     	super.onPause();
-    	Log.i("info", "onPause");
+    	af.onPause();
     }
 
     @Override
     protected void onStop() {
     	super.onStop();
-    	Log.i("info", "onStop");
+    	af.onStop();
     }
 
     @Override
     protected void onDestroy()  {
     	super.onDestroy();
-    	Log.i("info", "onDestroy");
+    	af.onDestroy();
     }
     
 }	

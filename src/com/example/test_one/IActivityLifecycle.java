@@ -1,10 +1,12 @@
 package com.example.test_one;
 
-import android.os.Bundle;
+import android.view.Menu;
 
-public interface IActivityFacade {
+public interface IActivityLifecycle {
 
-	void onCreate(Bundle savedInstanceState);
+	void onCreate();
+	
+	boolean onCreateOptionsMenu(Menu menu);
 	
 	void onStart();
 	     
