@@ -1,5 +1,7 @@
 package com.example.test_one;
 
+import com.example.helper.ActivityLifecycle;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;

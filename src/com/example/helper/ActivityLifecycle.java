@@ -1,4 +1,8 @@
-package com.example.test_one;
+package com.example.helper;
+
+import com.example.test_one.R;
+import com.example.test_one.R.layout;
+import com.example.test_one.R.menu;
 
 import android.app.Activity;
 import android.util.Log;
