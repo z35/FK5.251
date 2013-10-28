@@ -19,15 +19,15 @@ public class MainActivity extends Activity {
 	
 	private IActivityLifecycle lifeCycle;
 	private MainActivityEvents events;
-	private ActivityGuard<MainActivityEvents> ev;
-
+	
 	////////////////////////////////////////////////////////////////////////////
 	// standard class life cycle
 	////////////////////////////////////////////////////////////////////////////
 	
 	public MainActivity() {
 
-        ev = ActivityGuardFactory.newInstance(new ActivityLifecycle(), 
+		ActivityGuard<MainActivityEvents> ev = ActivityGuardFactory.newInstance(
+				new ActivityLifecycle(), 
         		new MainActivityEvents());
 
         events = ev.getEvents(); 
