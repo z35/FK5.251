@@ -1,4 +1,10 @@
-FK5.251
+FK5.251-starter
 =======
 
-The VHS course FK5.251
+This is the first project from the FK5.251 course.
+
+**HOW TO USE**
+
+Please create a new ANDROID project and clone into this.
+
+Cause there are some more directories needed to build an ANDROID application.
